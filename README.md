@@ -58,7 +58,7 @@ Prometheus successfully scraping metrics from Node Exporter instances running on
 ---
 
 ## Repository Structure
-
+```
 devops-monitoring-stack
 │
 ├── architecture
@@ -75,7 +75,7 @@ devops-monitoring-stack
 │ └── prometheus-targets.png
 │
 └── README.md
-
+```
 ## Purpose
 
 This repository demonstrates a simple **monitoring and observability setup for Linux infrastructure** using open-source tools commonly used in DevOps environments.
