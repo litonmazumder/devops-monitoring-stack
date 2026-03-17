@@ -1,7 +1,5 @@
 # DevOps Monitoring Stack
 
-# DevOps Monitoring Stack
-
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Prometheus](https://img.shields.io/badge/monitoring-prometheus-orange)
 ![Grafana](https://img.shields.io/badge/visualization-grafana-F46800)
