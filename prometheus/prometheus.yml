@@ -1,0 +1,67 @@
+# Prometheus configuration file
+# This configuration scrapes metrics from Prometheus itself
+# and from Node Exporter running on multiple servers.
+
+global:
+  # How often Prometheus scrapes metrics from targets
+  scrape_interval: 15s
+
+  # How often rules are evaluated
+  evaluation_interval: 15s
+
+
+# Alertmanager configuration (disabled in this lab setup)
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets: []
+          # Example:
+          # - alertmanager:9093
+
+
+# Rule files (optional)
+rule_files:
+  # - alert_rules.yml
+  # - recording_rules.yml
+
+
+# Scrape configurations
+scrape_configs:
+
+  # ------------------------------
+  # Prometheus self-monitoring
+  # ------------------------------
+  - job_name: "prometheus"
+
+    static_configs:
+      - targets:
+          - "localhost:9090"
+
+        labels:
+          service: "prometheus-server"
+
+
+  # ------------------------------
+  # Node Exporter servers
+  # ------------------------------
+  - job_name: "node_exporter"
+
+    static_configs:
+
+      # Application Server
+      - targets:
+          - "app-server-1:9100"
+        labels:
+          role: "application"
+
+      # Second Application Server
+      - targets:
+          - "app-server-2:9100"
+        labels:
+          role: "application"
+
+      # Database Server
+      - targets:
+          - "db-server-1:9100"
+        labels:
+          role: "database"
