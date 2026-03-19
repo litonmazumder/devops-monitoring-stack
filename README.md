@@ -4,7 +4,7 @@
 ![Prometheus](https://img.shields.io/badge/monitoring-prometheus-orange)
 ![Grafana](https://img.shields.io/badge/visualization-grafana-F46800)
 ![Node Exporter](https://img.shields.io/badge/exporter-node--exporter-green)
-![Visitors](https://visitor-badge.laobi.icu/badge?page_id=InferiorAK.Integrated-Share)
+![visitors](https://visitor-badge.laobi.icu/badge?page_id=devops-monitoring-stack)
 
 This project demonstrates a basic infrastructure monitoring stack using **Prometheus**, **Grafana**, and **Node Exporter**.
 
